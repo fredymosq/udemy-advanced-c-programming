@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int callStaticVariable();
+static int callStaticVariable();
 
 int main(int argc, char const *argv[])
 {
