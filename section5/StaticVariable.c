@@ -20,7 +20,8 @@ int callStaticVariable(){
     count++;
     myVariable++;
 
-    printf("\nthe function callStaticVariable has been executed: %i times, \nand the value of myVariable is: %i", count, myVariable);
+    printf("\nthe function callStaticVariable has been executed: %i times", count);
+    printf("\nand the value of myVariable is: %i\n", myVariable);
 
 
     return count;
