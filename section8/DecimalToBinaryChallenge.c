@@ -6,24 +6,20 @@ int main(int argc, char const *argv[])
 {
     int decimalNumber = 73;
     printf("Decimal number: %i\n", decimalNumber);
-    int binaryNumber[32];
+    int binaryNumber = 0;
     
-    int counter = 0;
+    int counter = 1;
     while (decimalNumber > 0)
     {
         int digit = decimalNumber % 2;
-        binaryNumber[counter] = digit;
         decimalNumber = decimalNumber / 2;
-        counter++;
+        binaryNumber += (digit * counter);
+        counter = counter * 10;
 
     }
 
     
-    printf("Binary number: ");
-    for (int i = counter - 1; i >= 0; i--)
-    {
-        printf("%i", binaryNumber[i]);
-    }
+    printf("Binary number: %i", binaryNumber);
 
     
     
