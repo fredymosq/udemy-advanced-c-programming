@@ -57,10 +57,8 @@ int main(int argc, char const *argv[])
    printf("\nNumbers of words in file is: %i", numberWords);
    printf("\nNumbers of characters in file is: %i", numberCharacters);
    
-
-
-
-   
+   free(pFileName);
+   fclose(pFile);
 
     return 0;
 }
