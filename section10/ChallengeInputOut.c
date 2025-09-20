@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 #define MAX_CHARACTERS_FILE_NAME 255
 
@@ -20,11 +21,13 @@ int main(int argc, char const *argv[])
 
    if (argc < 2)
    {
-    printf("Enter File name (MAX %i characters): ",MAX_CHARACTERS_FILE_NAME);
+    printf("Enter File name (MAX %i characters): ", MAX_CHARACTERS_FILE_NAME);
     scanf("%255s", pFileName);
    }
    else{
-    pFileName = argv[1];
+
+    strcpy(pFileName, argv[1]);
+
    }
    
    pFile = fopen(pFileName, "r");
