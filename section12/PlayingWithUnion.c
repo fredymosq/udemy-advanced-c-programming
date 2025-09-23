@@ -15,6 +15,15 @@ int main(int argc, char const *argv[])
     union car *mercedez;
 
     printf("Memory occupied by data: %zu\n", sizeof(mazda));
+
+    //Accessing union members
+
+    mazda.myFloatValue = 2.0;
+   // mazda.myIntValue = 5000;
+
+    printf("car %s\n", mazda.name);
+    printf("car %f\n", mazda.myFloatValue);
+    printf("car %i\n", mazda.myIntValue);
     
     return 0;
 }
